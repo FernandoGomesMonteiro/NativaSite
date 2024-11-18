@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recomendador de Plantas Nativas</title>
+
+    <!-- Importando o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Personalizando as cores e imagens de fundo */
+        .background-image {
+            background-image: url('https://via.placeholder.com/1920x1080?text=Plantas+Verde');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Apliquei uma cor suave no botão para contraste com o fundo verde */
+        .btn-primary {
+            background-color: #38a169; /* Verde suave */
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2f855a; /* Verde mais escuro */
+        }
+
+        /* Rolagem suave para a navegação */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Ajustes para o título */
+        .title-text {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Ajustes para o texto normal */
+        .text-description {
+            font-size: 1.125rem;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        /* Ajustes no botão de chamada para ação */
+        .cta-button {
+            background-color: #38a169;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1.125rem;
+            border-radius: 8px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #2f855a;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+
+    <!-- Header -->
+    <header class="background-image text-white py-16 relative">
+        <div class="overlay"></div>
+        <div class="container mx-auto flex justify-between items-center px-6 z-10 relative">
+            <h1 class="text-4xl font-extrabold leading-tight text-shadow-md">Recomendador de Plantas Nativas</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="sobre" class="text-lg text-white hover:text-green-300 transition duration-300">Sobre</a></li>
+                    <li><a href="filtros" class="text-lg text-white hover:text-green-300 transition duration-300">Filtros</a></li>
+                    <li><a href="contatos" class="text-lg text-white hover:text-green-300 transition duration-300">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sobre o Projeto -->
+    <section id="about" class="bg-gray-50 py-16">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8 transition-all duration-300 ease-in-out transform hover:text-green-600">
+                Sobre o Projeto Recomendador de Plantas Nativas
+            </h2>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                O Recomendador de Plantas Nativas é um projeto inovador que visa facilitar o processo de escolha de plantas para ambientes específicos. 
+                Utilizando inteligência artificial, o sistema oferece recomendações personalizadas com base nas condições do ambiente do usuário, 
+                como o tamanho do espaço, a quantidade de luz solar disponível e a frequência de rega desejada.
+            </p>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Nosso objetivo é proporcionar uma experiência única e prática para quem deseja cultivar plantas nativas de maneira simples e eficaz, 
+                sem a necessidade de ser um expert em jardinagem. Além disso, buscamos contribuir para a preservação ambiental, promovendo o cultivo 
+                de espécies que são adaptadas aos ecossistemas locais e que ajudam a manter o equilíbrio ecológico.
+            </p>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                A plataforma integra um banco de dados detalhado de plantas nativas, e por meio de filtros personalizados, 
+                o usuário pode encontrar a planta ideal para o seu ambiente. A inteligência artificial entra em ação ao aprender com as preferências 
+                e as condições do espaço, melhorando a precisão das recomendações ao longo do tempo.
+            </p>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Com foco na sustentabilidade, nosso projeto visa transformar ambientes urbanos, tornando-os mais verdes e agradáveis, 
+                ao mesmo tempo em que contribui para a preservação de espécies nativas e reduz a pegada ecológica.
+            </p>
+            <div class="mt-8">
+                <a href="#filters" class="cta-button">
+                    Comece a Explorar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Recomendador de Plantas Nativas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

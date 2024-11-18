@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador de Plantas Nativas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Adiciona imagem de fundo sutil com sobreposição */
+        .background-image {
+            background-image: url('https://guiadassuculentas.com/wp-content/uploads/2020/08/Echeveria-Secunda-O-Guia-Completo-Desta-Planta.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        /* Sobreposição para garantir que o texto seja legível */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Cor escura com transparência */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <header class="background-image text-white py-6 relative">
+        <div class="overlay"></div> <!-- Sobreposição para legibilidade -->
+        <div class="container mx-auto flex justify-between items-center px-6 z-10 relative">
+            <h1 class="text-3xl font-semibold">Recomendador de Plantas Nativas</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="sobre" class="hover:text-green-200">Sobre</a></li>
+                    <li><a href="filtros" class="hover:text-green-200">Filtros</a></li>
+                    <li><a href="contatos" class="hover:text-green-200">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Sobre -->
+    <main class="container mx-auto px-6 py-12">
+        <section id="about" class="bg-white shadow-lg rounded-lg p-8 mb-12">
+            <h2 class="text-2xl font-semibold text-green-600 mb-4">Sobre o Projeto</h2>
+            <p class="text-lg text-gray-700">
+                Este sistema foi criado para ajudar você a escolher plantas que se adaptam melhor ao seu ambiente, oferecendo recomendações personalizadas com base em suas preferências e condições do espaço.
+            </p>
+        </section>
+
+        <!-- Seção Filtros -->
+        <section id="filters" class="bg-white shadow-lg rounded-lg p-8">
+            <h2 class="text-2xl font-semibold text-green-600 mb-4">Filtros</h2>
+            <form id="plant-form">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div>
+                        <label for="size" class="block text-gray-600 mb-2">Tamanho do espaço:</label>
+                        <select id="size" name="size" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="small">Pequeno</option>
+                            <option value="medium">Médio</option>
+                            <option value="large">Grande</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="light" class="block text-gray-600 mb-2">Luz disponível:</label>
+                        <select id="light" name="light" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="direct">Luz Direta</option>
+                            <option value="indirect">Luz Indireta</option>
+                            <option value="low">Baixa Luminosidade</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="maintenance" class="block text-gray-600 mb-2">Manutenção desejada:</label>
+                        <select id="maintenance" name="maintenance" class="w-full p-2 border border-gray-300 rounded-md">
+                            <option value="low">Baixa</option>
+                            <option value="medium">Média</option>
+                            <option value="high">Alta</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" onclick="handleSubmit()" class="mt-6 w-full bg-green-600 text-white py-3 rounded-md hover:bg-green-500 transition">
+                    Buscar Plantas
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="background-image text-white py-4 relative">
+        <div class="overlay"></div> <!-- Sobreposição para legibilidade -->
+        <div class="container mx-auto text-center z-10 relative">
+            <p>&copy; 2024 Recomendador de Plantas Nativas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para capturar os dados do formulário e exibir no console
+        function handleSubmit() {
+            const size = document.getElementById('size').value;
+            const light = document.getElementById('light').value;
+            const maintenance = document.getElementById('maintenance').value;
+
+            // Simulação de resultado
+            alert(`Você escolheu: Tamanho: ${size}, Luz: ${light}, Manutenção: ${maintenance}`);
+        }
+    </script>
+
+</body>
+</html>
